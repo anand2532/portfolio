@@ -1,15 +1,15 @@
-/* eslint-disable @next/next/no-img-element */
 "use client";
-import { useState } from "react";
+
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import { DATA } from "@/data/resume";
-import { ChevronDown, ChevronRight } from "lucide-react";
+import { SITE } from "@/data/site";
 import { cn } from "@/lib/utils";
+import { ChevronDown, ChevronRight } from "lucide-react";
+import { useState } from "react";
 
 function LogoImage({ src, alt }: { src: string; alt: string }) {
   const [imageError, setImageError] = useState(false);
@@ -21,6 +21,7 @@ function LogoImage({ src, alt }: { src: string; alt: string }) {
   }
 
   return (
+    // eslint-disable-next-line @next/next/no-img-element
     <img
       src={src}
       alt={alt}
@@ -33,7 +34,7 @@ function LogoImage({ src, alt }: { src: string; alt: string }) {
 export default function WorkSection() {
   return (
     <Accordion type="single" collapsible className="w-full grid gap-6">
-      {DATA.work.map((work) => (
+      {SITE.work.map((work) => (
         <AccordionItem
           key={work.company}
           value={work.company}
@@ -84,4 +85,3 @@ export default function WorkSection() {
     </Accordion>
   );
 }
-

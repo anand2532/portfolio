@@ -1,6 +1,5 @@
 @import "tailwindcss";
 @import "tw-animate-css";
-@plugin "@tailwindcss/typography";
 
 @custom-variant dark (&:where(.dark, .dark *));
 
@@ -139,35 +138,6 @@
       transition-duration: 0.01ms !important;
       scroll-behavior: auto !important;
     }
-  }
-
-  .shiki,
-  .shiki span {
-    color: var(--shiki-light);
-    background-color: transparent;
-  }
-
-  .dark .shiki,
-  .dark .shiki span {
-    color: var(--shiki-dark);
-    background-color: transparent;
-  }
-
-  .prose pre {
-    @apply leading-relaxed bg-transparent! font-mono!;
-  }
-
-  .prose code {
-    @apply m-0! mx-1! border rounded-md! px-1.5 py-0.5 bg-muted/60 dark:bg-muted/40 text-[13px]! font-mono text-foreground/90!;
-  }
-
-  .prose code::before,
-  .prose code::after {
-    @apply content-none!;
-  }
-
-  .prose a {
-    @apply text-primary underline underline-offset-4;
   }
 }
 

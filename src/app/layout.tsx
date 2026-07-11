@@ -1,8 +1,7 @@
-import { DotPattern } from "@/components/magicui/dot-pattern";
 import { SiteHeader } from "@/components/site-header";
 import { StatusFooter } from "@/components/status-footer";
 import { ThemeProvider } from "@/components/theme-provider";
-import { TooltipProvider } from "@/components/ui/tooltip";
+import { DotPattern } from "@/components/magicui/dot-pattern";
 import { SITE } from "@/data/site";
 import { cn } from "@/lib/utils";
 import type { Metadata } from "next";
@@ -69,15 +68,13 @@ export default function RootLayout({
         )}
       >
         <ThemeProvider attribute="class" defaultTheme="dark" enableSystem={false}>
-          <TooltipProvider delayDuration={0}>
-            <div className="pointer-events-none fixed inset-0 z-0 blueprint-grid opacity-40" />
-            <DotPattern className="z-0" />
-            <SiteHeader />
-            <div className="relative z-10 flex-1 flex flex-col min-h-0">
-              {children}
-            </div>
-            <StatusFooter />
-          </TooltipProvider>
+          <div className="pointer-events-none fixed inset-0 z-0 blueprint-grid opacity-40" />
+          <DotPattern className="z-0" />
+          <SiteHeader />
+          <div className="relative z-10 flex-1 flex flex-col min-h-0">
+            {children}
+          </div>
+          <StatusFooter />
         </ThemeProvider>
       </body>
     </html>

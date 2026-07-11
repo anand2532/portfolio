@@ -277,20 +277,6 @@ export const SITE = {
       timeline: "1–4 weeks",
       startingAt: "Custom quote",
     },
-    // {
-    //   id: "vision-nodes",
-    //   icon: Briefcase,
-    //   title: "Edge Vision & Mesh Nodes",
-    //   outcome: "Camera + MCU + radio nodes for surveillance and remote sensing.",
-    //   includes: [
-    //     "OpenMV / MIPI camera pipelines",
-    //     "Sleep / wake power budgets",
-    //     "Image transfer over LoRa",
-    //     "Field deployment hardening",
-    //   ],
-    //   timeline: "4–10 weeks",
-    //   startingAt: "Custom quote",
-    // },
     {
       id: "uav",
       icon: Package,
@@ -370,10 +356,4 @@ export const SITE = {
       "Suganthi Neelagiri, Ritesh Kumar, Rishabh Dadhich, Yaman Singh, Anand Mohan Pandey",
     href: "#",
   },
-
-  /** Kept empty so legacy Magic UI hackathon section type-checks if imported */
-  hackathons: [],
 } as const;
-
-/** @deprecated Use SITE — kept for gradual migration */
-export const DATA = SITE;
